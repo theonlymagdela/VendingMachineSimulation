@@ -8,7 +8,7 @@ public class VendingMachine {
 
     private final CashRegister cashRegister = new CashRegister();
     private final Inventory inventory  = new Inventory();
-    private double totalCoinsAdded = 0.0;
+    private double totalValueOfCoinsAdded = 0.0;
 
     public VendingMachine() {
     }
@@ -22,7 +22,7 @@ public class VendingMachine {
     }
 
     public void setTotal(double totalCoinsAdded) {
-        this.totalCoinsAdded = totalCoinsAdded;
+        this.totalValueOfCoinsAdded = totalCoinsAdded;
     }
 
     public Product selectProduct(String productName) {
@@ -30,6 +30,9 @@ public class VendingMachine {
             if(product.getName().equals(productName)) {
                 if(product.getQuantity() >= 1) {
                     product.setQuantity(product.getQuantity() - 1);
+                    if(!exactChange(product)) {
+                        System.out.println("EXACT CHANGE ONLY");
+                    }
                 } else {
                     System.out.println("SOLD OUT");
                 }
@@ -41,22 +44,22 @@ public class VendingMachine {
 
     public void acceptCoin(String name, double price) {
         if(isQuarter(cashRegister.getByName(name))) {
-            totalCoinsAdded = totalCoinsAdded + 0.25;
+            totalValueOfCoinsAdded = totalValueOfCoinsAdded + 0.25;
             cashRegister.addQuantity(name);
             stillToPay(price);
         } else if (isDime(cashRegister.getByName(name))) {
-            totalCoinsAdded = totalCoinsAdded + 0.10;
+            totalValueOfCoinsAdded = totalValueOfCoinsAdded + 0.10;
             cashRegister.addQuantity(name);
             stillToPay(price);
         } else if (isNickel(cashRegister.getByName(name))) {
-            totalCoinsAdded = totalCoinsAdded + 0.05;
+            totalValueOfCoinsAdded = totalValueOfCoinsAdded + 0.05;
             cashRegister.addQuantity(name);
             stillToPay(price);
         }
     }
 
     public void stillToPay(double price) {
-        double total = price - totalCoinsAdded;
+        double total = price - totalValueOfCoinsAdded;
 
         if (total > 0) {
             System.out.println("Still to pay " + (String.format("%.2f", total)) + " USD");
@@ -91,6 +94,32 @@ public class VendingMachine {
                 System.out.println("Thank you for shopping with us!");
             }
         }
+    }
+
+    public boolean exactChange(Product product) {
+        double price = 0 - product.getPrice();
+        double coinValue = 0;
+        double total = price - coinValue;
+
+        int qnQuarter = cashRegister.howManyCoinsByName(CoinValues.QUARTER.getName());
+        int qnDime = cashRegister.howManyCoinsByName(CoinValues.DIME.getName());
+        int qnNickel = cashRegister.howManyCoinsByName(CoinValues.NICKEL.getName());
+
+        while(total < 0) {
+            if (total <= -0.24 && (qnQuarter >= 1)) {
+                total = total - CoinValues.QUARTER.getValue();
+                qnQuarter = qnQuarter -1;
+            } else if (total <= -0.09  && (qnDime >= 1)) {
+                total = total - CoinValues.DIME.getValue();
+                qnDime = qnDime -1;
+            } else if (total <= -0.04 && (qnNickel >= 1)) {
+                total = total - CoinValues.DIME.getValue();
+                qnNickel = qnNickel - 1;
+            } else if (total <= -0.04 && (qnNickel <= 1)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public boolean isQuarter(Coin coin) {

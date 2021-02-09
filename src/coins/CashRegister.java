@@ -12,15 +12,12 @@ public class CashRegister {
     }
 
     public int howManyCoinsByName(String name) {
-        int count = 0;
-
         for(Coin coin: coins) {
             if(coin.getName().equals(name)) {
-                count++;
-                return count;
+                return coin.getQuantity();
             }
         }
-        return count;
+        return 0;
     }
 
     public int howManyCoinsTotal() {
@@ -59,5 +56,11 @@ public class CashRegister {
             }
         }
         return null;
+    }
+
+    public void printRegister() {
+        for (Coin coin: coins) {
+            System.out.println(coin.getName() + ": " + coin.getQuantity());
+        }
     }
 }
