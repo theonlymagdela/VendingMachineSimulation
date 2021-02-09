@@ -4,10 +4,14 @@ import coins.CoinValues;
 import products.Inventory;
 import products.Product;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class VendingMachine {
 
     private final CashRegister cashRegister = new CashRegister();
     private final Inventory inventory  = new Inventory();
+    private final CurrentSelect currentSelect = new CurrentSelect();
     private double totalValueOfCoinsAdded = 0.0;
 
     public VendingMachine() {
@@ -29,7 +33,7 @@ public class VendingMachine {
         for(Product product: inventory.getProducts()) {
             if(product.getName().equals(productName)) {
                 if(product.getQuantity() >= 1) {
-                    product.setQuantity(product.getQuantity() - 1);
+                    currentSelect.setProductName(productName);
                     if(!exactChange(product)) {
                         System.out.println("EXACT CHANGE ONLY");
                     }
@@ -45,15 +49,15 @@ public class VendingMachine {
     public void acceptCoin(String name, double price) {
         if(isQuarter(cashRegister.getByName(name))) {
             totalValueOfCoinsAdded = totalValueOfCoinsAdded + 0.25;
-            cashRegister.addQuantity(name);
+            currentSelect.addToList(name);
             stillToPay(price);
         } else if (isDime(cashRegister.getByName(name))) {
             totalValueOfCoinsAdded = totalValueOfCoinsAdded + 0.10;
-            cashRegister.addQuantity(name);
+            currentSelect.addToList(name);
             stillToPay(price);
         } else if (isNickel(cashRegister.getByName(name))) {
             totalValueOfCoinsAdded = totalValueOfCoinsAdded + 0.05;
-            cashRegister.addQuantity(name);
+            currentSelect.addToList(name);
             stillToPay(price);
         }
     }
@@ -65,6 +69,8 @@ public class VendingMachine {
             System.out.println("Still to pay " + (String.format("%.2f", total)) + " USD");
         } else if (total == 0) {
             System.out.println("Thank you for shopping with us!");
+            subtractFromProduct();
+            addToCoins();
             setTotal(0.0);
         } else {
             System.out.println("Your change is " + String.format("%.2f", total));
@@ -90,8 +96,11 @@ public class VendingMachine {
                 giveChange(total + CoinValues.NICKEL.getValue());
             } else if (total <= -0.04 && (cashRegister.howManyCoinsByName(CoinValues.NICKEL.getName()) < 1)) {
                 System.out.println("No appropriate coins in register, sorry!");
+                returnCoins();
             } else {
                 System.out.println("Thank you for shopping with us!");
+                subtractFromProduct();
+                addToCoins();
             }
         }
     }
@@ -120,6 +129,26 @@ public class VendingMachine {
             }
         }
         return true;
+    }
+
+    public void returnCoins() {
+        currentSelect.printTheList();
+        currentSelect.emptyList();
+        currentSelect.setProductName(null);
+        setTotal(0.0);
+    }
+
+
+
+    public void addToCoins() {
+        for(String coin: currentSelect.getListOfCoins()) {
+            cashRegister.addQuantity(coin);
+        }
+        currentSelect.emptyList();
+    }
+
+    public void subtractFromProduct() {
+        inventory.subtractQuantity(currentSelect.getProductName());
     }
 
     public boolean isQuarter(Coin coin) {

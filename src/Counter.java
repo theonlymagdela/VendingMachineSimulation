@@ -24,9 +24,11 @@ public class Counter {
         }
         System.out.println("<==============================>");
 
-        cashRegister.add(new Nickel(CoinValues.NICKEL.getWeight(), CoinValues.NICKEL.getSize(), 0));
-        cashRegister.add(new Dime(CoinValues.DIME.getWeight(), CoinValues.DIME.getSize(), 0));
-        cashRegister.add(new Quarter(CoinValues.QUARTER.getWeight(), CoinValues.QUARTER.getSize(), 0));
+        cashRegister.add(new Nickel(CoinValues.NICKEL.getWeight(), CoinValues.NICKEL.getSize(), 6));
+        cashRegister.add(new Dime(CoinValues.DIME.getWeight(), CoinValues.DIME.getSize(), 4));
+        cashRegister.add(new Quarter(CoinValues.QUARTER.getWeight(), CoinValues.QUARTER.getSize(), 2));
+        cashRegister.printRegister();
+        System.out.println("<==============================>");
 
         System.out.println("SELECT PRODUCT");
         Product candy = vendingMachine.selectProduct(ProductValues.CANDY.getName());
@@ -36,7 +38,10 @@ public class Counter {
         vendingMachine.acceptCoin(CoinValues.NICKEL.getName(), candy.getPrice());
         vendingMachine.acceptCoin(CoinValues.DIME.getName(), candy.getPrice());
         vendingMachine.acceptCoin(CoinValues.QUARTER.getName(), candy.getPrice());
-        vendingMachine.acceptCoin(CoinValues.QUARTER.getName(), candy.getPrice());
+        vendingMachine.returnCoins();
+
+        System.out.println("<===============================>");
+        cashRegister.printRegister();
 
         System.out.println("<===============================>");
         System.out.println("ON SHELVES:");
@@ -53,6 +58,9 @@ public class Counter {
         vendingMachine.acceptCoin(CoinValues.DIME.getName(), candy.getPrice());
         vendingMachine.acceptCoin(CoinValues.QUARTER.getName(), coke.getPrice());
         vendingMachine.acceptCoin(CoinValues.QUARTER.getName(), coke.getPrice());
+
+        System.out.println("<===============================>");
+        cashRegister.printRegister();
 
         System.out.println("<===============================>");
         System.out.println("ON SHELVES:");
@@ -72,6 +80,9 @@ public class Counter {
         vendingMachine.acceptCoin(CoinValues.QUARTER.getName(), secondCoke.getPrice());
 
         System.out.println("<===============================>");
+        cashRegister.printRegister();
+
+        System.out.println("<===============================>");
         System.out.println("ON SHELVES:");
         inventory.printInventory();
         System.out.println("<===============================>");
@@ -85,6 +96,9 @@ public class Counter {
         vendingMachine.acceptCoin(CoinValues.DIME.getName(), chips.getPrice());
         vendingMachine.acceptCoin(CoinValues.DIME.getName(), chips.getPrice());
         vendingMachine.acceptCoin(CoinValues.DIME.getName(), chips.getPrice());
+
+        System.out.println("<===============================>");
+        cashRegister.printRegister();
 
         System.out.println("<===============================>");
         System.out.println("ON SHELVES:");
@@ -105,6 +119,9 @@ public class Counter {
         vendingMachine.acceptCoin(CoinValues.QUARTER.getName(), secondChips.getPrice());
 
         System.out.println("<===============================>");
+        cashRegister.printRegister();
+
+        System.out.println("<===============================>");
         System.out.println("ON SHELVES:");
         inventory.printInventory();
         System.out.println("<===============================>");
@@ -117,6 +134,9 @@ public class Counter {
         vendingMachine.acceptCoin(CoinValues.QUARTER.getName(), secondCandy.getPrice());
         vendingMachine.acceptCoin(CoinValues.QUARTER.getName(), secondCandy.getPrice());
         vendingMachine.acceptCoin(CoinValues.QUARTER.getName(), secondCandy.getPrice());
+
+        System.out.println("<===============================>");
+        cashRegister.printRegister();
 
         System.out.println("<===============================>");
         System.out.println("ON SHELVES:");
