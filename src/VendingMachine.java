@@ -25,10 +25,14 @@ public class VendingMachine {
         this.totalCoinsAdded = totalCoinsAdded;
     }
 
-    public Product pickProduct(String productName) {
+    public Product selectProduct(String productName) {
         for(Product product: inventory.getProducts()) {
             if(product.getName().equals(productName)) {
-                product.setQuantity(product.getQuantity() - 1);
+                if(product.getQuantity() >= 1) {
+                    product.setQuantity(product.getQuantity() - 1);
+                } else {
+                    System.out.println("SOLD OUT");
+                }
                 return product;
             }
         }

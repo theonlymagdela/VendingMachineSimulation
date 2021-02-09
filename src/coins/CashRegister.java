@@ -60,14 +60,4 @@ public class CashRegister {
         }
         return null;
     }
-
-    public void remove(Coin coin) {
-        coins.remove(coin);
-    }
-
-    public void printRegister() {
-        for(Coin coin: coins) {
-            System.out.println(coin);
-        }
-    }
 }

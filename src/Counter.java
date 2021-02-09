@@ -1,8 +1,5 @@
 import coins.*;
-import products.Candy;
-import products.Chips;
-import products.Coke;
-import products.Product;
+import products.*;
 
 public class Counter {
 
@@ -36,10 +33,10 @@ public class Counter {
         System.out.println("Total coins: " + cashRegister.howManyCoinsTotal());
         System.out.println("<==============================>");
 
-        System.out.println("What would you like to buy?");
-        Product candy = vendingMachine.pickProduct("candy");
+        System.out.println("SELECT PRODUCT");
+        Product candy = vendingMachine.selectProduct(ProductValues.CANDY.getName());
         System.out.println(candy.getName() + " for " + candy.getPrice() + " USD was chosen");
-        System.out.println("Please add coins");
+        System.out.println("INSERT COINS");
 
         vendingMachine.acceptCoin(CoinValues.NICKEL.getName(), candy.getPrice());
         vendingMachine.acceptCoin(CoinValues.DIME.getName(), candy.getPrice());
@@ -52,10 +49,10 @@ public class Counter {
         inventory.printInventory();
         System.out.println("<===============================>");
 
-        System.out.println("What would you like to buy?");
-        Product coke = vendingMachine.pickProduct("coke");
+        System.out.println("SELECT PRODUCT");
+        Product coke = vendingMachine.selectProduct(ProductValues.COKE.getName());
         System.out.println(coke.getName() + " for " + coke.getPrice() + " USD was chosen");
-        System.out.println("Please add coins");
+        System.out.println("INSERT COINS");
 
         vendingMachine.acceptCoin(CoinValues.DIME.getName(), coke.getPrice());
         vendingMachine.acceptCoin(CoinValues.DIME.getName(), coke.getPrice());
@@ -69,10 +66,10 @@ public class Counter {
         inventory.printInventory();
         System.out.println("<===============================>");
 
-        System.out.println("What would you like to buy?");
-        Product secondCoke = vendingMachine.pickProduct("coke");
+        System.out.println("SELECT PRODUCT");
+        Product secondCoke = vendingMachine.selectProduct(ProductValues.COKE.getName());
         System.out.println(secondCoke.getName() + " for " + secondCoke.getPrice() + " USD was chosen");
-        System.out.println("Please add coins");
+        System.out.println("INSERT COINS");
 
         vendingMachine.acceptCoin(CoinValues.DIME.getName(), secondCoke.getPrice());
         vendingMachine.acceptCoin(CoinValues.DIME.getName(), secondCoke.getPrice());
@@ -87,15 +84,33 @@ public class Counter {
         inventory.printInventory();
         System.out.println("<===============================>");
 
-        System.out.println("What would you like to buy?");
-        Product chips = vendingMachine.pickProduct("chips");
+        System.out.println("SELECT PRODUCT");
+        Product chips = vendingMachine.selectProduct(ProductValues.CHIPS.getName());
         System.out.println(chips.getName() + " for " + chips.getPrice() + " USD was chosen");
-        System.out.println("Please add coins");
+        System.out.println("INSERT COINS");
 
         vendingMachine.acceptCoin(CoinValues.NICKEL.getName(), chips.getPrice());
         vendingMachine.acceptCoin(CoinValues.NICKEL.getName(), chips.getPrice());
         vendingMachine.acceptCoin(CoinValues.NICKEL.getName(), chips.getPrice());
         vendingMachine.acceptCoin(CoinValues.QUARTER.getName(), chips.getPrice());
+        vendingMachine.acceptCoin(CoinValues.QUARTER.getName(), chips.getPrice());
+
+        System.out.println("<===============================>");
+        System.out.println("Currently on shelves:");
+        inventory.printInventory();
+        System.out.println("<===============================>");
+
+        System.out.println("SELECT PRODUCT");
+        vendingMachine.selectProduct(ProductValues.COKE.getName());
+        System.out.println("SELECT PRODUCT");
+        Product secondChips = vendingMachine.selectProduct(ProductValues.CHIPS.getName());
+        System.out.println(secondChips.getName() + " for " + secondChips.getPrice() + " USD was chosen");
+        System.out.println("INSERT COINS");
+        vendingMachine.acceptCoin(CoinValues.NICKEL.getName(), chips.getPrice());
+        vendingMachine.acceptCoin(CoinValues.QUARTER.getName(), chips.getPrice());
+        vendingMachine.acceptCoin(CoinValues.NICKEL.getName(), chips.getPrice());
+        vendingMachine.acceptCoin(CoinValues.NICKEL.getName(), chips.getPrice());
+        vendingMachine.acceptCoin(CoinValues.NICKEL.getName(), chips.getPrice());
         vendingMachine.acceptCoin(CoinValues.QUARTER.getName(), chips.getPrice());
     }
 }
