@@ -1,5 +1,6 @@
 import coins.CashRegister;
 import coins.Coin;
+import coins.CoinValues;
 import products.Inventory;
 import products.Product;
 
@@ -34,16 +35,19 @@ public class VendingMachine {
         return null;
     }
 
-    public void acceptCoin(Coin coin) {
-        if(isQuarter(coin)) {
+    public void acceptCoin(String name, double price) {
+        if(isQuarter(cashRegister.getByName(name))) {
             totalCoinsAdded = totalCoinsAdded + 0.25;
-            cashRegister.add(coin);
-        } else if (isDime(coin)) {
+            cashRegister.addQuantity(name);
+            stillToPay(price);
+        } else if (isDime(cashRegister.getByName(name))) {
             totalCoinsAdded = totalCoinsAdded + 0.10;
-            cashRegister.add(coin);
-        } else if (isNickel(coin)) {
+            cashRegister.addQuantity(name);
+            stillToPay(price);
+        } else if (isNickel(cashRegister.getByName(name))) {
             totalCoinsAdded = totalCoinsAdded + 0.05;
-            cashRegister.add(coin);
+            cashRegister.addQuantity(name);
+            stillToPay(price);
         }
     }
 
@@ -62,30 +66,27 @@ public class VendingMachine {
         }
     }
 
-    public double giveChange(double total) {
-        double NickelValue = 0.05;
-        double DimeValue = 0.10;
-        double QuarterValue = 0.25;
+    public void giveChange(double total) {
 
         if(cashRegister.getCoins() != null) {
-            if (total <= -0.24 && (cashRegister.howManyCoinsByName("quarter") >= 1)) {
+            if (total <= -0.24 && (cashRegister.howManyCoinsByName(CoinValues.QUARTER.getName()) >= 1)) {
                 System.out.println("Giving back one quarter");
-                cashRegister.removeByName("quarter");
-                return giveChange(total + QuarterValue);
-            } else if (total <= -0.09  && (cashRegister.howManyCoinsByName("dime") >= 1)) {
+                cashRegister.subtractQuantity(CoinValues.QUARTER.getName());
+                giveChange(total + CoinValues.QUARTER.getValue());
+            } else if (total <= -0.09  && (cashRegister.howManyCoinsByName(CoinValues.DIME.getName()) >= 1)) {
                 System.out.println("Giving back one dime");
-                cashRegister.removeByName("dime");
-                return giveChange(total + DimeValue);
-            } else if (total <= -0.04 && (cashRegister.howManyCoinsByName("nickel") >= 1)) {
+                cashRegister.subtractQuantity(CoinValues.DIME.getName());
+                giveChange(total + CoinValues.DIME.getValue());
+            } else if (total <= -0.04 && (cashRegister.howManyCoinsByName(CoinValues.NICKEL.getName()) >= 1)) {
                 System.out.println("Giving back one nickel");
-                cashRegister.removeByName("nickel");
-                return giveChange(total + NickelValue);
+                cashRegister.subtractQuantity(CoinValues.NICKEL.getName());
+                giveChange(total + CoinValues.NICKEL.getValue());
+            } else if (total <= -0.04 && (cashRegister.howManyCoinsByName(CoinValues.NICKEL.getName()) < 1)) {
+                System.out.println("No appropriate coins in register, sorry!");
             } else {
-                return 0.0;
+                System.out.println("Thank you for shopping with us!");
             }
         }
-        System.out.println("Not enough coins! Sorry.");
-        return 0.0;
     }
 
     public boolean isQuarter(Coin coin) {

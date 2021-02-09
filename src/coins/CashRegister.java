@@ -8,11 +8,6 @@ public class CashRegister {
     private final List<Coin> coins = new ArrayList<>();
 
     public List<Coin> getCoins() {
-
-        coins.add(new Nickel(5.01, 0.835));
-        coins.add(new Dime(2.28, 0.705));
-        coins.add(new Quarter(5.67, 0.955));
-
         return coins;
     }
 
@@ -29,14 +24,50 @@ public class CashRegister {
     }
 
     public int howManyCoinsTotal() {
-        return coins.size();
+        int total = 0;
+
+        for(Coin coin: coins) {
+            total = total + coin.getQuantity();
+        }
+        return total;
     }
 
     public void add(Coin coin) {
         coins.add(coin);
     }
 
-    public void removeByName(String name) {
-        coins.removeIf(coin -> coin.getName().equals(name));
+    public void addQuantity(String name) {
+        for(Coin coin: coins) {
+            if(coin.getName().equals(name)) {
+                coin.setQuantity(coin.getQuantity() + 1);
+            }
+        }
+    }
+
+    public void subtractQuantity(String name) {
+        for(Coin coin: coins) {
+            if(coin.getName().equals(name)) {
+                coin.setQuantity(coin.getQuantity() - 1);
+            }
+        }
+    }
+
+    public Coin getByName(String name) {
+        for(Coin coin: coins) {
+            if(coin.getName().equals(name)) {
+                return coin;
+            }
+        }
+        return null;
+    }
+
+    public void remove(Coin coin) {
+        coins.remove(coin);
+    }
+
+    public void printRegister() {
+        for(Coin coin: coins) {
+            System.out.println(coin);
+        }
     }
 }

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e6952554-af87-4a31-9314-f5fa61857d6f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Counter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VendingMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coins/CashRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coins/CashRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coins/Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coins/Coin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coins/CoinValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coins/CoinValues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coins/Dime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coins/Dime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coins/Nickel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coins/Nickel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coins/Penny.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coins/Penny.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coins/Quarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coins/Quarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/products/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/Inventory.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1oBy68CJlO2CbjjNuzLsUeevqf9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Counter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Counter" />
+      <module name="vending-machine-kata" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Counter" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e6952554-af87-4a31-9314-f5fa61857d6f" name="Default Changelist" comment="" />
+      <created>1612774099675</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612774099675</updated>
+      <workItem from="1612774100705" duration="21690000" />
+      <workItem from="1612802063471" duration="1156000" />
+      <workItem from="1612804043447" duration="11000" />
+      <workItem from="1612804129800" duration="316000" />
+      <workItem from="1612804452891" duration="112000" />
+      <workItem from="1612804569925" duration="120000" />
+      <workItem from="1612804694752" duration="16000" />
+      <workItem from="1612808630170" duration="12687000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="243" y="25" key="#Project_Structure" timestamp="1612804520650">
+      <screen x="0" y="25" width="1440" height="796" />
+    </state>
+    <state x="243" y="25" key="#Project_Structure/0.25.1440.796@0.25.1440.796" timestamp="1612804520650" />
+    <state x="220" y="82" width="1071" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612804400372">
+      <screen x="0" y="25" width="1440" height="796" />
+    </state>
+    <state x="220" y="82" width="1071" height="730" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.796@0.25.1440.796" timestamp="1612804400372" />
+    <state x="749" y="131" key="#com.intellij.ide.util.MemberChooser" timestamp="1612871371021">
+      <screen x="0" y="25" width="1440" height="796" />
+    </state>
+    <state x="749" y="131" key="#com.intellij.ide.util.MemberChooser/0.25.1440.796@0.25.1440.796" timestamp="1612871371021" />
+    <state x="493" y="229" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1612804348555">
+      <screen x="0" y="25" width="1440" height="796" />
+    </state>
+    <state x="493" y="229" key="#com.intellij.ide.util.TreeClassChooserDialog/0.25.1440.796@0.25.1440.796" timestamp="1612804348555" />
+    <state x="674" y="171" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612788583639">
+      <screen x="0" y="25" width="1440" height="796" />
+    </state>
+    <state x="674" y="171" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.796@0.25.1440.796" timestamp="1612788583639" />
+    <state width="1327" height="31" key="GridCell.Tab.0.bottom" timestamp="1612872967731">
+      <screen x="0" y="25" width="1440" height="796" />
+    </state>
+    <state width="1327" height="31" key="GridCell.Tab.0.bottom/0.25.1440.796@0.25.1440.796" timestamp="1612872967731" />
+    <state width="1327" height="31" key="GridCell.Tab.0.center" timestamp="1612872967729">
+      <screen x="0" y="25" width="1440" height="796" />
+    </state>
+    <state width="1327" height="31" key="GridCell.Tab.0.center/0.25.1440.796@0.25.1440.796" timestamp="1612872967729" />
+    <state width="1327" height="31" key="GridCell.Tab.0.left" timestamp="1612872967729">
+      <screen x="0" y="25" width="1440" height="796" />
+    </state>
+    <state width="1327" height="31" key="GridCell.Tab.0.left/0.25.1440.796@0.25.1440.796" timestamp="1612872967729" />
+    <state width="1327" height="31" key="GridCell.Tab.0.right" timestamp="1612872967730">
+      <screen x="0" y="25" width="1440" height="796" />
+    </state>
+    <state width="1327" height="31" key="GridCell.Tab.0.right/0.25.1440.796@0.25.1440.796" timestamp="1612872967730" />
+    <state width="1327" height="390" key="GridCell.Tab.1.bottom" timestamp="1612865793167">
+      <screen x="0" y="25" width="1440" height="796" />
+    </state>
+    <state width="1327" height="390" key="GridCell.Tab.1.bottom/0.25.1440.796@0.25.1440.796" timestamp="1612865793167" />
+    <state width="1327" height="390" key="GridCell.Tab.1.center" timestamp="1612865793166">
+      <screen x="0" y="25" width="1440" height="796" />
+    </state>
+    <state width="1327" height="390" key="GridCell.Tab.1.center/0.25.1440.796@0.25.1440.796" timestamp="1612865793166" />
+    <state width="1327" height="390" key="GridCell.Tab.1.left" timestamp="1612865793166">
+      <screen x="0" y="25" width="1440" height="796" />
+    </state>
+    <state width="1327" height="390" key="GridCell.Tab.1.left/0.25.1440.796@0.25.1440.796" timestamp="1612865793166" />
+    <state width="1327" height="390" key="GridCell.Tab.1.right" timestamp="1612865793167">
+      <screen x="0" y="25" width="1440" height="796" />
+    </state>
+    <state width="1327" height="390" key="GridCell.Tab.1.right/0.25.1440.796@0.25.1440.796" timestamp="1612865793167" />
+    <state x="243" y="25" key="SettingsEditor" timestamp="1612808788055">
+      <screen x="0" y="25" width="1440" height="796" />
+    </state>
+    <state x="243" y="25" key="SettingsEditor/0.25.1440.796@0.25.1440.796" timestamp="1612808788055" />
+    <state x="716" y="190" key="refactoring.ChangeSignatureDialog" timestamp="1612774411350">
+      <screen x="0" y="25" width="1440" height="796" />
+    </state>
+    <state x="716" y="190" key="refactoring.ChangeSignatureDialog/0.25.1440.796@0.25.1440.796" timestamp="1612774411350" />
+    <state x="601" y="145" width="670" height="676" key="search.everywhere.popup" timestamp="1612779325677">
+      <screen x="0" y="25" width="1440" height="796" />
+    </state>
+    <state x="601" y="145" width="670" height="676" key="search.everywhere.popup/0.25.1440.796@0.25.1440.796" timestamp="1612779325677" />
+  </component>
+</project>

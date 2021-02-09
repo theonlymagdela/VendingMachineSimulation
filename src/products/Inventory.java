@@ -8,10 +8,17 @@ public class Inventory {
     private final List<Product> products = new ArrayList<>();
 
     public List<Product> getProducts() {
-        products.add(new Coke(20));
-        products.add(new Candy(20));
-        products.add(new Chips(20));
 
         return products;
+    }
+
+    public void add(Product product) {
+        products.add(product);
+    }
+
+    public void printInventory() {
+        for(Product product: products) {
+            System.out.println(product);
+        }
     }
 }

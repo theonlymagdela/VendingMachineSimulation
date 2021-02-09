@@ -4,11 +4,13 @@ public abstract class Coin {
 
     private final double weight;
     private final double size;
+    private int quantity;
     private final String name;
 
-    public Coin(double weight, double size, String name) {
+    public Coin(double weight, double size, int quantity, String name) {
         this.weight = weight;
         this.size = size;
+        this.quantity = quantity;
         this.name = name;
     }
 
@@ -22,6 +24,14 @@ public abstract class Coin {
 
     public String getName() {
         return name;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     @Override
