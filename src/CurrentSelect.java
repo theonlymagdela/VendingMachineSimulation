@@ -34,9 +34,9 @@ public class CurrentSelect {
     }
 
     public void printTheList() {
-        System.out.println("RETURNING COINS");
+        System.out.println("RETURNING COINS:");
         for(String string: listOfCoins) {
-            System.out.println(string);
+            System.out.println("* " + string);
         }
     }
 }

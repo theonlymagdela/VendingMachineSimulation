@@ -1,9 +1,9 @@
 package products;
 
 public enum ProductValues {
-    CANDY("candy"),
-    CHIPS("chips"),
-    COKE("coke");
+    CANDY("CANDY"),
+    CHIPS("CHIPS"),
+    COKE("COKE");
 
     private final String name;
 

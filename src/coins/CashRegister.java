@@ -20,15 +20,6 @@ public class CashRegister {
         return 0;
     }
 
-    public int howManyCoinsTotal() {
-        int total = 0;
-
-        for(Coin coin: coins) {
-            total = total + coin.getQuantity();
-        }
-        return total;
-    }
-
     public void add(Coin coin) {
         coins.add(coin);
     }

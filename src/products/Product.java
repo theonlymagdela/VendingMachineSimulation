@@ -30,6 +30,6 @@ public abstract class Product {
 
     @Override
     public String toString() {
-        return quantity + "x " + name + " at " + price + " USD";
+        return quantity + "x " + name + " AT " + price + " USD";
     }
 }

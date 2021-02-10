@@ -11,13 +11,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6952554-af87-4a31-9314-f5fa61857d6f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/CurrentSelect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Display.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Printer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/vending-machine-kata/Counter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/vending-machine-kata/Counter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/vending-machine-kata/CurrentSelect.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/vending-machine-kata/CurrentSelect.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/vending-machine-kata/VendingMachine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/vending-machine-kata/VendingMachine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/vending-machine-kata/coins/CashRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/vending-machine-kata/coins/CashRegister.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/vending-machine-kata/coins/CoinValues.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/vending-machine-kata/coins/CoinValues.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/vending-machine-kata/coins/Dime.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/vending-machine-kata/coins/Dime.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/vending-machine-kata/coins/Nickel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/vending-machine-kata/coins/Nickel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/vending-machine-kata/coins/Penny.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/vending-machine-kata/coins/Penny.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/vending-machine-kata/coins/Quarter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/vending-machine-kata/coins/Quarter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/vending-machine-kata/products/Candy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/vending-machine-kata/products/Candy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/vending-machine-kata/products/Chips.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/vending-machine-kata/products/Chips.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/vending-machine-kata/products/Coke.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/vending-machine-kata/products/Coke.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/vending-machine-kata/products/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/vending-machine-kata/products/Inventory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/vending-machine-kata/products/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/vending-machine-kata/products/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/vending-machine-kata/products/ProductValues.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/vending-machine-kata/products/ProductValues.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Counter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Counter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CurrentSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CurrentSelect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VendingMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coins/CashRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coins/CashRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coins/CoinValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coins/CoinValues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coins/Dime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coins/Dime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coins/Nickel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coins/Nickel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coins/Penny.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coins/Penny.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coins/Quarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coins/Quarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/products/Candy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/Candy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/products/Chips.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/Chips.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/products/Coke.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/Coke.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/products/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/products/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/products/ProductValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/ProductValues.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,13 +99,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -105,7 +133,8 @@
       <workItem from="1612804452891" duration="112000" />
       <workItem from="1612804569925" duration="120000" />
       <workItem from="1612804694752" duration="16000" />
-      <workItem from="1612808630170" duration="23632000" />
+      <workItem from="1612808630170" duration="26558000" />
+      <workItem from="1612887006414" duration="14652000" />
     </task>
     <servers />
   </component>
@@ -145,38 +174,46 @@
       <screen x="0" y="25" width="1440" height="796" />
     </state>
     <state x="674" y="171" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.796@0.25.1440.796" timestamp="1612788583639" />
-    <state width="1327" height="257" key="GridCell.Tab.0.bottom" timestamp="1612883807033">
-      <screen x="0" y="25" width="1440" height="796" />
+    <state width="1327" height="393" key="GridCell.Tab.0.bottom" timestamp="1612961223317">
+      <screen x="0" y="25" width="1440" height="798" />
     </state>
-    <state width="1327" height="257" key="GridCell.Tab.0.bottom/0.25.1440.796@0.25.1440.796" timestamp="1612883807033" />
-    <state width="1327" height="257" key="GridCell.Tab.0.center" timestamp="1612883807032">
-      <screen x="0" y="25" width="1440" height="796" />
+    <state width="1327" height="445" key="GridCell.Tab.0.bottom/0.25.1440.796@0.25.1440.796" timestamp="1612893794639" />
+    <state width="1327" height="393" key="GridCell.Tab.0.bottom/0.25.1440.798@0.25.1440.798" timestamp="1612961223317" />
+    <state width="1327" height="393" key="GridCell.Tab.0.center" timestamp="1612961223316">
+      <screen x="0" y="25" width="1440" height="798" />
     </state>
-    <state width="1327" height="257" key="GridCell.Tab.0.center/0.25.1440.796@0.25.1440.796" timestamp="1612883807032" />
-    <state width="1327" height="257" key="GridCell.Tab.0.left" timestamp="1612883807032">
-      <screen x="0" y="25" width="1440" height="796" />
+    <state width="1327" height="445" key="GridCell.Tab.0.center/0.25.1440.796@0.25.1440.796" timestamp="1612893794638" />
+    <state width="1327" height="393" key="GridCell.Tab.0.center/0.25.1440.798@0.25.1440.798" timestamp="1612961223316" />
+    <state width="1327" height="393" key="GridCell.Tab.0.left" timestamp="1612961223316">
+      <screen x="0" y="25" width="1440" height="798" />
     </state>
-    <state width="1327" height="257" key="GridCell.Tab.0.left/0.25.1440.796@0.25.1440.796" timestamp="1612883807032" />
-    <state width="1327" height="257" key="GridCell.Tab.0.right" timestamp="1612883807032">
-      <screen x="0" y="25" width="1440" height="796" />
+    <state width="1327" height="445" key="GridCell.Tab.0.left/0.25.1440.796@0.25.1440.796" timestamp="1612893794638" />
+    <state width="1327" height="393" key="GridCell.Tab.0.left/0.25.1440.798@0.25.1440.798" timestamp="1612961223316" />
+    <state width="1327" height="393" key="GridCell.Tab.0.right" timestamp="1612961223316">
+      <screen x="0" y="25" width="1440" height="798" />
     </state>
-    <state width="1327" height="257" key="GridCell.Tab.0.right/0.25.1440.796@0.25.1440.796" timestamp="1612883807032" />
-    <state width="1327" height="325" key="GridCell.Tab.1.bottom" timestamp="1612883262012">
-      <screen x="0" y="25" width="1440" height="796" />
+    <state width="1327" height="445" key="GridCell.Tab.0.right/0.25.1440.796@0.25.1440.796" timestamp="1612893794639" />
+    <state width="1327" height="393" key="GridCell.Tab.0.right/0.25.1440.798@0.25.1440.798" timestamp="1612961223316" />
+    <state width="1327" height="393" key="GridCell.Tab.1.bottom" timestamp="1612961223318">
+      <screen x="0" y="25" width="1440" height="798" />
     </state>
-    <state width="1327" height="325" key="GridCell.Tab.1.bottom/0.25.1440.796@0.25.1440.796" timestamp="1612883262012" />
-    <state width="1327" height="325" key="GridCell.Tab.1.center" timestamp="1612883262010">
-      <screen x="0" y="25" width="1440" height="796" />
+    <state width="1327" height="366" key="GridCell.Tab.1.bottom/0.25.1440.796@0.25.1440.796" timestamp="1612892968907" />
+    <state width="1327" height="393" key="GridCell.Tab.1.bottom/0.25.1440.798@0.25.1440.798" timestamp="1612961223318" />
+    <state width="1327" height="393" key="GridCell.Tab.1.center" timestamp="1612961223317">
+      <screen x="0" y="25" width="1440" height="798" />
     </state>
-    <state width="1327" height="325" key="GridCell.Tab.1.center/0.25.1440.796@0.25.1440.796" timestamp="1612883262010" />
-    <state width="1327" height="325" key="GridCell.Tab.1.left" timestamp="1612883262009">
-      <screen x="0" y="25" width="1440" height="796" />
+    <state width="1327" height="366" key="GridCell.Tab.1.center/0.25.1440.796@0.25.1440.796" timestamp="1612892968906" />
+    <state width="1327" height="393" key="GridCell.Tab.1.center/0.25.1440.798@0.25.1440.798" timestamp="1612961223317" />
+    <state width="1327" height="393" key="GridCell.Tab.1.left" timestamp="1612961223317">
+      <screen x="0" y="25" width="1440" height="798" />
     </state>
-    <state width="1327" height="325" key="GridCell.Tab.1.left/0.25.1440.796@0.25.1440.796" timestamp="1612883262009" />
-    <state width="1327" height="325" key="GridCell.Tab.1.right" timestamp="1612883262011">
-      <screen x="0" y="25" width="1440" height="796" />
+    <state width="1327" height="366" key="GridCell.Tab.1.left/0.25.1440.796@0.25.1440.796" timestamp="1612892968906" />
+    <state width="1327" height="393" key="GridCell.Tab.1.left/0.25.1440.798@0.25.1440.798" timestamp="1612961223317" />
+    <state width="1327" height="393" key="GridCell.Tab.1.right" timestamp="1612961223318">
+      <screen x="0" y="25" width="1440" height="798" />
     </state>
-    <state width="1327" height="325" key="GridCell.Tab.1.right/0.25.1440.796@0.25.1440.796" timestamp="1612883262011" />
+    <state width="1327" height="366" key="GridCell.Tab.1.right/0.25.1440.796@0.25.1440.796" timestamp="1612892968906" />
+    <state width="1327" height="393" key="GridCell.Tab.1.right/0.25.1440.798@0.25.1440.798" timestamp="1612961223318" />
     <state x="243" y="25" key="SettingsEditor" timestamp="1612808788055">
       <screen x="0" y="25" width="1440" height="796" />
     </state>

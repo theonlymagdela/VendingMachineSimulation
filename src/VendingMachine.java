@@ -4,8 +4,7 @@ import coins.CoinValues;
 import products.Inventory;
 import products.Product;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.math.BigDecimal;
 
 public class VendingMachine {
 
@@ -37,68 +36,80 @@ public class VendingMachine {
                     if(!exactChange(product)) {
                         System.out.println("EXACT CHANGE ONLY");
                     }
+                    return product;
                 } else {
                     System.out.println("SOLD OUT");
+                    return null;
                 }
-                return product;
             }
+            System.out.println("NOT IN INVENTORY");
+            return null;
         }
         return null;
     }
 
-    public void acceptCoin(String name, double price) {
+    public boolean acceptCoin(String name, double price) {
         if(isQuarter(cashRegister.getByName(name))) {
             totalValueOfCoinsAdded = totalValueOfCoinsAdded + 0.25;
             currentSelect.addToList(name);
-            stillToPay(price);
+            System.out.println("ACCEPTED QUARTER");
+            return stillToPay(price);
         } else if (isDime(cashRegister.getByName(name))) {
             totalValueOfCoinsAdded = totalValueOfCoinsAdded + 0.10;
             currentSelect.addToList(name);
-            stillToPay(price);
+            System.out.println("ACCEPTED DIME");
+            return stillToPay(price);
         } else if (isNickel(cashRegister.getByName(name))) {
             totalValueOfCoinsAdded = totalValueOfCoinsAdded + 0.05;
             currentSelect.addToList(name);
-            stillToPay(price);
+            System.out.println("ACCEPTED NICKEL");
+            return stillToPay(price);
+        } else if (name.equals("break")) {
+            returnCoins();
+            return false;
         }
+        return false;
     }
 
-    public void stillToPay(double price) {
+    public boolean stillToPay(double price) {
         double total = price - totalValueOfCoinsAdded;
 
         if (total > 0) {
-            System.out.println("Still to pay " + (String.format("%.2f", total)) + " USD");
+            System.out.println("STILL TO PAY " + (String.format("%.2f", total)) + " USD");
+            return true;
         } else if (total == 0) {
-            System.out.println("Thank you for shopping with us!");
+            System.out.println("THANK YOU FOR SHOPPING WITH US!");
             subtractFromProduct();
             addToCoins();
             setTotal(0.0);
+            return false;
         } else {
-            System.out.println("Your change is " + String.format("%.2f", total));
+            System.out.println("YOUR CHANGE IS " + String.format("%.2f", total));
             giveChange(total);
             setTotal(0.0);
+            return false;
         }
     }
 
     public void giveChange(double total) {
-
         if(cashRegister.getCoins() != null) {
             if (total <= -0.24 && (cashRegister.howManyCoinsByName(CoinValues.QUARTER.getName()) >= 1)) {
-                System.out.println("Giving back one quarter");
+                System.out.println("GIVING BACK ONE QUARTER");
                 cashRegister.subtractQuantity(CoinValues.QUARTER.getName());
                 giveChange(total + CoinValues.QUARTER.getValue());
             } else if (total <= -0.09  && (cashRegister.howManyCoinsByName(CoinValues.DIME.getName()) >= 1)) {
-                System.out.println("Giving back one dime");
+                System.out.println("GIVING BACK ONE DIME");
                 cashRegister.subtractQuantity(CoinValues.DIME.getName());
                 giveChange(total + CoinValues.DIME.getValue());
             } else if (total <= -0.04 && (cashRegister.howManyCoinsByName(CoinValues.NICKEL.getName()) >= 1)) {
-                System.out.println("Giving back one nickel");
+                System.out.println("GIVING BACK ONE NICKEL");
                 cashRegister.subtractQuantity(CoinValues.NICKEL.getName());
                 giveChange(total + CoinValues.NICKEL.getValue());
             } else if (total <= -0.04 && (cashRegister.howManyCoinsByName(CoinValues.NICKEL.getName()) < 1)) {
-                System.out.println("No appropriate coins in register, sorry!");
+                System.out.println("NO APPROPRIATE COINS IN REGISTER, SORRY!");
                 returnCoins();
             } else {
-                System.out.println("Thank you for shopping with us!");
+                System.out.println("THANK YOU FOR SHOPPING WITH US");
                 subtractFromProduct();
                 addToCoins();
             }
@@ -106,9 +117,7 @@ public class VendingMachine {
     }
 
     public boolean exactChange(Product product) {
-        double price = 0 - product.getPrice();
-        double coinValue = 0;
-        double total = price - coinValue;
+        double total = 0 - product.getPrice();
 
         int qnQuarter = cashRegister.howManyCoinsByName(CoinValues.QUARTER.getName());
         int qnDime = cashRegister.howManyCoinsByName(CoinValues.DIME.getName());
@@ -116,15 +125,17 @@ public class VendingMachine {
 
         while(total < 0) {
             if (total <= -0.24 && (qnQuarter >= 1)) {
-                total = total - CoinValues.QUARTER.getValue();
+                total = total + CoinValues.QUARTER.getValue();
                 qnQuarter = qnQuarter -1;
             } else if (total <= -0.09  && (qnDime >= 1)) {
-                total = total - CoinValues.DIME.getValue();
+                total = total + CoinValues.DIME.getValue();
                 qnDime = qnDime -1;
             } else if (total <= -0.04 && (qnNickel >= 1)) {
-                total = total - CoinValues.DIME.getValue();
+                total = total + CoinValues.NICKEL.getValue();
                 qnNickel = qnNickel - 1;
-            } else if (total <= -0.04 && (qnNickel <= 1)) {
+            } else if (total <= 0.00001) {
+                return true;
+            } else if (total <= -0.04 && (qnNickel < 1)) {
                 return false;
             }
         }
@@ -137,8 +148,6 @@ public class VendingMachine {
         currentSelect.setProductName(null);
         setTotal(0.0);
     }
-
-
 
     public void addToCoins() {
         for(String coin: currentSelect.getListOfCoins()) {
